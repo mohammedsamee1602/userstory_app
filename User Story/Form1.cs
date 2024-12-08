@@ -16,5 +16,40 @@ namespace User_Story
         {
             InitializeComponent();
         }
+
+        private void BtnSubmit_Click(object sender, EventArgs e)
+        {
+          
+                string username = txtUsername.Text.Trim();
+                string email = txtEmail.Text.Trim();
+                string password = txtPassword.Text;
+                string passwordHash = HashingHelper.HashPassword(password);
+
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+                {
+                    MessageBox.Show("All fields are required.");
+                    return;
+                }
+
+                DatabaseHelper db = new DatabaseHelper();
+                try
+                {
+                    if (db.RegisterUser(username, email, passwordHash))
+                    {
+                        MessageBox.Show("Signup successful!");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Signup failed.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
+            
+
+        }
     }
 }

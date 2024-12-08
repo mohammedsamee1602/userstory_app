@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Development\\ruberx\\source\\User Story\\",
+  "WorkspaceRootPath": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|d:\\development\\ruberx\\source\\user story\\user story\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|solutionrelative:user story\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|d:\\development\\ruberx\\source\\user_story\\userstory_app\\user story\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|solutionrelative:user story\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|d:\\development\\ruberx\\source\\user_story\\userstory_app\\user story\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|solutionrelative:user story\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|d:\\development\\ruberx\\source\\user_story\\userstory_app\\user story\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|solutionrelative:user story\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|d:\\development\\ruberx\\source\\user_story\\userstory_app\\user story\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|solutionrelative:user story\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\Development\\ruberx\\source\\User Story\\User Story\\Form1.cs",
-              "RelativeDocumentMoniker": "User Story\\Form1.cs",
-              "ToolTip": "D:\\Development\\ruberx\\source\\User Story\\User Story\\Form1.cs [Design]",
-              "RelativeToolTip": "User Story\\Form1.cs [Design]",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\Program.cs",
+              "RelativeDocumentMoniker": "User Story\\Program.cs",
+              "ToolTip": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\Program.cs",
+              "RelativeToolTip": "User Story\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T09:45:14.447Z",
+              "WhenOpened": "2024-12-07T11:11:27.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\Form2.cs",
+              "RelativeDocumentMoniker": "User Story\\Form2.cs",
+              "ToolTip": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\Form2.cs",
+              "RelativeToolTip": "User Story\\Form2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T11:10:51.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\Form2.cs",
+              "RelativeDocumentMoniker": "User Story\\Form2.cs",
+              "ToolTip": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\Form2.cs [Design]",
+              "RelativeToolTip": "User Story\\Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T11:09:30.018Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "User Story\\DatabaseHelper.cs",
+              "ToolTip": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\DatabaseHelper.cs",
+              "RelativeToolTip": "User Story\\DatabaseHelper.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAowDUAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T10:31:42.202Z",
+              "EditorCaption": ""
             }
           ]
         }

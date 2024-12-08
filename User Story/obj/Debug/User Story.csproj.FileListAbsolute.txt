@@ -1,0 +1,11 @@
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\bin\Debug\User Story.exe.config
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\bin\Debug\User Story.exe
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\bin\Debug\User Story.pdb
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User Story.csproj.AssemblyReference.cache
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Properties.Resources.resources
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User Story.csproj.GenerateResource.cache
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User Story.csproj.CoreCompileInputs.cache
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User Story.exe
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User Story.pdb
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form1.resources
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form2.resources
