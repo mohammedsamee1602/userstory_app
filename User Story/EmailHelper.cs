@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace User_Story
 {
@@ -13,20 +9,30 @@ namespace User_Story
         {
             using (MailMessage mail = new MailMessage())
             {
-                mail.From = new MailAddress("your_email@domain.com");
+                // Set sender's email
+                mail.From = new MailAddress("testingthesystem678@gmail.com");
+
+                // Set recipient email
                 mail.To.Add(to);
+
+                // Email subject and body
                 mail.Subject = subject;
                 mail.Body = body;
-                mail.IsBodyHtml = true;
+                mail.IsBodyHtml = true; // If HTML content is required
 
-                using (SmtpClient smtp = new SmtpClient("smtp.yourdomain.com", 587))
+                // Configure Gmail SMTP settings
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
-                    smtp.Credentials = new System.Net.NetworkCredential("your_email@domain.com", "your_password");
+                    // Credentials
+                    smtp.Credentials = new System.Net.NetworkCredential("testingthesystem678@gmail.com", "Theworldisyours1_");
+
+                    // Enable SSL for secure communication
                     smtp.EnableSsl = true;
+
+                    // Send the email
                     smtp.Send(mail);
                 }
             }
         }
     }
-
 }

@@ -9,3 +9,7 @@ D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User 
 D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User Story.pdb
 D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form1.resources
 D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form2.resources
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form3.resources
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form4.resources
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form5.resources
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form6.resources

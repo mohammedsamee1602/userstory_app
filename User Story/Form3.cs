@@ -16,5 +16,38 @@ namespace User_Story
         {
             InitializeComponent();
         }
+
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            string email = txtEmail.Text.Trim(); // Assuming there's a TextBox named txtEmail
+
+            if (string.IsNullOrEmpty(email))
+            {
+                MessageBox.Show("Please enter your email address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                DatabaseHelper dbHelper = new DatabaseHelper();
+                bool isTokenSent = dbHelper.SendResetToken(email);
+
+
+                if (isTokenSent)
+                {
+                    MessageBox.Show("A reset token has been sent to your email.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close(); // Close Form4 after sending the token
+                }
+                else
+                {
+                    MessageBox.Show("The email address is not registered.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }
