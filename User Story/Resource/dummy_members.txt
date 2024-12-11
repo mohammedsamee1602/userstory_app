@@ -1,0 +1,5 @@
+memberID,fullName,membershipType,interests
+1,John Doe,Basic,Sports
+2,Jane Smith,Premium,Music
+3,Mike Johnson,VIP,Gaming
+4,Sarah Williams,Basic,Cooking

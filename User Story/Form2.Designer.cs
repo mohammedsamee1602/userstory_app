@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.BtnSubmit = new System.Windows.Forms.Button();
             this.BtnReset = new System.Windows.Forms.Button();
+            this.btnSignup = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPassword
@@ -72,28 +73,40 @@
             // 
             // BtnSubmit
             // 
-            this.BtnSubmit.Location = new System.Drawing.Point(169, 201);
+            this.BtnSubmit.Location = new System.Drawing.Point(131, 201);
             this.BtnSubmit.Name = "BtnSubmit";
-            this.BtnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.BtnSubmit.Size = new System.Drawing.Size(155, 23);
             this.BtnSubmit.TabIndex = 9;
-            this.BtnSubmit.Text = "Submit";
+            this.BtnSubmit.Text = "Login";
             this.BtnSubmit.UseVisualStyleBackColor = true;
             this.BtnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // BtnReset
             // 
-            this.BtnReset.Location = new System.Drawing.Point(131, 240);
+            this.BtnReset.Location = new System.Drawing.Point(131, 280);
             this.BtnReset.Name = "BtnReset";
             this.BtnReset.Size = new System.Drawing.Size(155, 23);
             this.BtnReset.TabIndex = 16;
             this.BtnReset.Text = "Reset Password";
             this.BtnReset.UseVisualStyleBackColor = true;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
+            // 
+            // btnSignup
+            // 
+            this.btnSignup.Location = new System.Drawing.Point(131, 241);
+            this.btnSignup.Name = "btnSignup";
+            this.btnSignup.Size = new System.Drawing.Size(155, 23);
+            this.btnSignup.TabIndex = 17;
+            this.btnSignup.Text = "Signup";
+            this.btnSignup.UseVisualStyleBackColor = true;
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 362);
+            this.Controls.Add(this.btnSignup);
             this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
@@ -101,7 +114,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnSubmit);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,5 +129,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnSubmit;
         private System.Windows.Forms.Button BtnReset;
+        private System.Windows.Forms.Button btnSignup;
     }
 }

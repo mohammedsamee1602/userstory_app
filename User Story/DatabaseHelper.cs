@@ -119,6 +119,31 @@ namespace User_Story
             }
         }
 
+        public bool Login(string email, string password)
+        {
+            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            {
+                conn.Open();
+
+                // Retrieve the hashed password from the database
+                string query = "SELECT Password FROM tbl_users WHERE Useremail = ?";
+                using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Email", email);
+
+                    string storedHash = cmd.ExecuteScalar()?.ToString();
+                    if (string.IsNullOrEmpty(storedHash))
+                    {
+                        return false; // Email not found
+                    }
+
+                    // Compare the stored hash with the entered password
+                    return HashingHelper.VerifyPassword(password, storedHash);
+                }
+            }
+        }
+
+
         // Step 1: Send Reset Token
         public bool SendResetToken(string email)
         {
@@ -137,6 +162,8 @@ namespace User_Story
                         return false; // Email not found
                     }
                 }
+
+
 
                 // Generate token
                 string token = GenerateResetToken();
@@ -166,6 +193,7 @@ namespace User_Story
                     MessageBox.Show($"Failed to log token to file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
+
                 // Send the token via email
                 string subject = "Password Reset Token";
                 string body = $"Your password reset token is: {token}\n\nThis token is valid for 30 minutes.";
@@ -194,28 +222,38 @@ namespace User_Story
         }
 
         // Step 3: Reset Password
-        public bool ResetPassword(string token, string newPasswordHash)
+        public bool ResetPassword(string resetToken, string hashedPassword)
         {
             using (OleDbConnection conn = new OleDbConnection(connectionString))
             {
                 conn.Open();
 
-                // Validate the token
-                if (!ValidateResetToken(token))
+                // Check if the token is valid and not expired
+                string query = "SELECT COUNT(1) FROM tbl_users WHERE ResetToken = ? AND ResetTokenExpiry > ?";
+                using (OleDbCommand cmd = new OleDbCommand(query, conn))
                 {
-                    return false;
+                    cmd.Parameters.AddWithValue("@Token", resetToken);
+                    cmd.Parameters.AddWithValue("@Expiry", DateTime.Now);
+
+                    if (Convert.ToInt32(cmd.ExecuteScalar()) == 0)
+                    {
+                        return false; // Token invalid or expired
+                    }
                 }
 
                 // Update the password and clear the reset token
-                string query = "UPDATE tbl_users SET Userpassword = @Password, ResetToken = NULL, ResetTokenExpiry = NULL WHERE ResetToken = @Token";
+                query = "UPDATE tbl_users SET Userpassword = ?, ResetToken = NULL, ResetTokenExpiry = NULL WHERE ResetToken = ?";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Password", newPasswordHash);
-                    cmd.Parameters.AddWithValue("@Token", token);
-                    return cmd.ExecuteNonQuery() > 0;
+                    cmd.Parameters.AddWithValue("@Password", hashedPassword);
+                    cmd.Parameters.AddWithValue("@Token", resetToken);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    return rowsAffected > 0;
                 }
             }
         }
+
 
         // Helper method to generate a random reset token
         private string GenerateResetToken()

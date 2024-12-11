@@ -19,7 +19,7 @@ namespace User_Story
 
         private void BtnValidateToken_Click(object sender, EventArgs e)
         {
-            string token = txtToken.Text.Trim(); // Assuming there's a TextBox named txtToken
+            string token = txtToken.Text.Trim(); 
 
             if (string.IsNullOrEmpty(token))
             {
@@ -35,9 +35,10 @@ namespace User_Story
                 if (isValid)
                 {
                     MessageBox.Show("Token is valid. You may now reset your password.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close(); // Close Form4 after successful validation
+                    
                     Form5 form5 = new Form5(token); // Pass the token to Form6
                     form5.Show(); // Open Form5 for password renewal
+                    this.Hide();
                 }
                 else
                 {

@@ -48,5 +48,14 @@ namespace User_Story
             }
         }
 
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            // Populate the filter ComboBox with the relevant options
+            cmbFilter.Items.Clear();
+            cmbFilter.Items.Add("Name");
+            cmbFilter.Items.Add("Membership Type");
+            cmbFilter.Items.Add("Interests");
+            cmbFilter.SelectedIndex = 0; // Set the default selected item
+        }
     }
 }

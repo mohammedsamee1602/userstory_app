@@ -21,8 +21,8 @@ namespace User_Story
 
         private void BtnRenewPassword_Click(object sender, EventArgs e)
         {
-            string newPassword = txtNewPassword.Text.Trim(); // Assuming there's a TextBox named txtNewPassword
-            string confirmPassword = txtConfirmPassword.Text.Trim(); // Assuming there's a TextBox named txtConfirmPassword
+            string newPassword = txtNewPassword.Text.Trim();
+            string confirmPassword = txtConfirmPassword.Text.Trim();
 
             if (string.IsNullOrEmpty(newPassword) || string.IsNullOrEmpty(confirmPassword))
             {
@@ -38,17 +38,26 @@ namespace User_Story
 
             try
             {
+                // Hash the password before saving
+                string hashedPassword = HashingHelper.HashPassword(newPassword);
+
                 DatabaseHelper dbHelper = new DatabaseHelper();
-                bool isPasswordReset = dbHelper.ResetPassword(resetToken, newPassword);
+                bool isPasswordReset = dbHelper.ResetPassword(resetToken, hashedPassword);
 
                 if (isPasswordReset)
                 {
                     MessageBox.Show("Your password has been successfully reset. You can now log in with your new password.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close(); // Close Form6 after successful password reset
+                    Form2 loginPage = new Form2();
+                    this.Hide();
+                    loginPage.ShowDialog();
+                   
                 }
                 else
                 {
                     MessageBox.Show("Failed to reset password. The token may be invalid or expired.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Form3 resetPass = new Form3();
+                    this.Hide();
+                    resetPass.ShowDialog();
                 }
             }
             catch (Exception ex)
@@ -56,5 +65,6 @@ namespace User_Story
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

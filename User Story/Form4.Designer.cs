@@ -39,7 +39,7 @@
             this.BtnValidateToken.Name = "BtnValidateToken";
             this.BtnValidateToken.Size = new System.Drawing.Size(155, 23);
             this.BtnValidateToken.TabIndex = 22;
-            this.BtnValidateToken.Text = "Send Resend Link";
+            this.BtnValidateToken.Text = "Validate token";
             this.BtnValidateToken.UseVisualStyleBackColor = true;
             this.BtnValidateToken.Click += new System.EventHandler(this.BtnValidateToken_Click);
             // 
@@ -69,7 +69,8 @@
             this.Controls.Add(this.txtToken);
             this.Controls.Add(this.label2);
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Validate";
             this.ResumeLayout(false);
             this.PerformLayout();
 

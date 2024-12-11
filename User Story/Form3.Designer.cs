@@ -69,7 +69,8 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Rest Pass";
             this.ResumeLayout(false);
             this.PerformLayout();
 

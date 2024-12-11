@@ -72,13 +72,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 450);
+            this.ClientSize = new System.Drawing.Size(566, 400);
             this.Controls.Add(this.dataGridViewResults);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cmbFilter);
             this.Controls.Add(this.txtSearchCriteria);
             this.Name = "Form6";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search Page";
+            this.Load += new System.EventHandler(this.Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

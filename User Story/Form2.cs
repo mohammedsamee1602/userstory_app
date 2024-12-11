@@ -34,11 +34,29 @@ namespace User_Story
             {
                 MessageBox.Show("Login successful!");
                 // Proceed to the main application
+
+                Form6 searchPage = new Form6();
+                this.Hide();
+                searchPage.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Invalid email or password.");
             }
+        }
+
+        private void btnSignup_Click(object sender, EventArgs e)
+        {
+            Form1 signup = new Form1();
+            this.Hide();
+            signup.ShowDialog();
+        }
+
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            Form3 resetpass = new Form3();
+            this.Hide();
+            resetpass.ShowDialog();
         }
     }
 }

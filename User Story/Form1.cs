@@ -37,7 +37,10 @@ namespace User_Story
                     if (db.RegisterUser(username, email, passwordHash))
                     {
                         MessageBox.Show("Signup successful!");
-                        this.Close();
+                    Form2 loginPage = new Form2();
+                    this.Hide();
+                    loginPage.ShowDialog();
+;
                     }
                     else
                     {

@@ -19,7 +19,7 @@ namespace User_Story
 
         private void BtnReset_Click(object sender, EventArgs e)
         {
-            string email = txtEmail.Text.Trim(); // Assuming there's a TextBox named txtEmail
+            string email = txtEmail.Text.Trim();
 
             if (string.IsNullOrEmpty(email))
             {
@@ -36,16 +36,33 @@ namespace User_Story
                 if (isTokenSent)
                 {
                     MessageBox.Show("A reset token has been sent to your email.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close(); // Close Form4 after sending the token
+                    Form4 validateToken = new Form4();
+                    this.Hide();
+                    validateToken.ShowDialog();
+
+                    Form4 validateTokenPage = new Form4();
+                    this.Hide();
+                    validateTokenPage.ShowDialog();
+                  
+
+
                 }
                 else
                 {
                     MessageBox.Show("The email address is not registered.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    Form2 loginPage = new Form2();
+                    this.Hide();
+                    loginPage.ShowDialog();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                Form4 validateTokenPage = new Form4();
+                this.Hide();
+                validateTokenPage.ShowDialog();
             }
         }
 
