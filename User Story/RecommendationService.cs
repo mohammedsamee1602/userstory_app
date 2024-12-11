@@ -1,137 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace User_Story
 {
     public class RecommendationService
     {
-        public List<Recommendation> GenerateRecommendations(int userId)
+        private string connectionString;
+
+        public RecommendationService(string connectionString)
         {
-            // Fetch user preferences
-            User user = GetUserDetails(userId);
+            this.connectionString = connectionString;
+        }
 
-            // Get past interactions
-            List<Interaction> interactions = GetUserInteractions(userId);
-
-            // Fetch matching events based on preferences and interactions
-            List<Event> events = GetRelevantEvents(user.Preferences, interactions);
-
-            // Create recommendations
-            List<Recommendation> recommendations = events.Select(e => new Recommendation
+        public List<string> GenerateRecommendations(int userId)
+        {
+            List<string> recommendations = new List<string>();
+            try
             {
-                UserID = userId,
-                EventID = e.EventID,
-                GeneratedDate = DateTime.Now
-            }).ToList();
+                using (OleDbConnection conn = new OleDbConnection(connectionString))
+                {
+                    conn.Open();
 
-            // Store recommendations in the database
-            StoreRecommendations(userId, recommendations);
-
+                    // Fetch user event history
+                    string query = @"SELECT EventID FROM tbl_user_history WHERE UserID = ?";
+                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("?", userId);
+                        OleDbDataReader reader = cmd.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            int eventId = reader.GetInt32(0);
+                            // Example logic: generate recommendation based on event
+                            recommendations.Add($"Recommended activity for event {eventId}");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error generating recommendations: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             return recommendations;
         }
-
-        public void TrackInteraction(int userId, int eventId, string interactionType)
-        {
-            // Create and save interaction data
-            Interaction interaction = new Interaction
-            {
-                UserID = userId,
-                EventID = eventId,
-                InteractionDate = DateTime.Now,
-                InteractionType = interactionType
-            };
-
-            SaveInteraction(interaction);
-        }
-
-        private void RefineRecommendations(int userId)
-        {
-            // Fetch updated user behavior and preferences
-            List<Interaction> interactions = GetUserInteractions(userId);
-
-            // Update the recommendation model
-            UpdateRecommendationModel(userId, interactions);
-        }
-
-        // Placeholder function to fetch user details by ID
-        public static User GetUserDetails(int userId)
-        {
-            return new User
-            {
-                UserID = userId,
-                Name = "Jane Doe",
-                Email = "janedoe@example.com",
-                Preferences = new List<string> { "Fitness", "Travel", "Food" }
-            };
-        }
-
-        // Placeholder function to fetch user interactions
-        public static List<Interaction> GetUserInteractions(int userId)
-        {
-            return new List<Interaction>
-            {
-                new Interaction { UserID = userId, EventID = 1, InteractionType = "View", InteractionDate = DateTime.Now.AddDays(-10) },
-                new Interaction { UserID = userId, EventID = 2, InteractionType = "Like", InteractionDate = DateTime.Now.AddDays(-5) }
-            };
-        }
-
-        // Placeholder function to fetch relevant events
-        public static List<Event> GetRelevantEvents(List<string> preferences, List<Interaction> interactions)
-        {
-            return new List<Event>
-            {
-                new Event { EventID = 1, Name = "Yoga Retreat", Category = "Fitness" },
-                new Event { EventID = 2, Name = "Food Festival", Category = "Food" }
-            };
-        }
-
-        // Placeholder function to store recommendations
-        public static void StoreRecommendations(int userId, List<Recommendation> recommendations)
-        {
-            Console.WriteLine($"Stored {recommendations.Count} recommendations for User ID: {userId}");
-        }
-
-        // Placeholder function to save interactions
-        public static void SaveInteraction(Interaction interaction)
-        {
-            Console.WriteLine($"Saved interaction: UserID={interaction.UserID}, EventID={interaction.EventID}, Type={interaction.InteractionType}");
-        }
-
-        // Placeholder function to update the recommendation model
-        public static void UpdateRecommendationModel(int userId, List<Interaction> interactions)
-        {
-            Console.WriteLine($"Updated recommendation model for User ID: {userId}");
-        }
     }
 
-    public class User
-    {
-        public int UserID { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public List<string> Preferences { get; set; }
-    }
-
-    public class Interaction
-    {
-        public int UserID { get; set; }
-        public int EventID { get; set; }
-        public string InteractionType { get; set; }
-        public DateTime InteractionDate { get; set; }
-    }
-
-    public class Event
-    {
-        public int EventID { get; set; }
-        public string Name { get; set; }
-        public string Category { get; set; }
-    }
-
-    public class Recommendation
-    {
-        public int UserID { get; set; }
-        public int EventID { get; set; }
-        public DateTime GeneratedDate { get; set; }
-    }
 }

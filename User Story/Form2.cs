@@ -30,20 +30,31 @@ namespace User_Story
             }
 
             DatabaseHelper db = new DatabaseHelper();
-            if (db.LoginUser(email, passwordHash))
-            {
-                MessageBox.Show("Login successful!");
-                // Proceed to the main application
+            int userId = db.GetUserIdIfValid(email, passwordHash); // New method to validate and get UserId
 
-                Form6 searchPage = new Form6();
-                this.Hide();
-                searchPage.ShowDialog();
+            if (userId > 0)
+            {
+                // Save the UserId to tbl_loggedIn
+                if (db.SaveLoggedInUser(userId))
+                {
+                    MessageBox.Show("Login successful!");
+
+                    // Navigate to the next form
+                    Form6 searchPage = new Form6();
+                    this.Hide();
+                    searchPage.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Error saving login session. Please try again.");
+                }
             }
             else
             {
                 MessageBox.Show("Invalid email or password.");
             }
         }
+
 
         private void btnSignup_Click(object sender, EventArgs e)
         {

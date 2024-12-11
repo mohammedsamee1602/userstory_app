@@ -27,6 +27,10 @@ namespace User_Story
             connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + customdataSource;
         }
 
+        public string returnConString()
+        {
+            return connectionString;
+        }
 
         public List<Member> SearchMembers(string criteria, string filter)
         {
@@ -75,6 +79,62 @@ namespace User_Story
             return members;
         }
 
+
+        public bool SaveLoggedInUser(int userId)
+        {
+            try
+            {
+                using (OleDbConnection conn = new OleDbConnection(returnConString()))
+                {
+                    conn.Open();
+                    string query = @"INSERT INTO tbl_loggedIn (UserId, LoginDate) VALUES (?, ?)";
+                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("?", userId);
+                        cmd.Parameters.AddWithValue("?", DateTime.Now.ToShortDateString());
+
+                        cmd.ExecuteNonQuery();
+                        return true; // Success
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving login session: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return false; // Failure
+        }
+
+        public int GetUserIdIfValid(string email, string passwordHash)
+        {
+            int userId = -1;
+            try
+            {
+                using (OleDbConnection conn = new OleDbConnection(returnConString()))
+                {
+                    conn.Open();
+                    string query = "SELECT UserId FROM tbl_users WHERE Useremail = ? AND UserPassword = ?";
+                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("?", email);
+                        cmd.Parameters.AddWithValue("?", passwordHash);
+
+                        OleDbDataReader reader = cmd.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            userId = Convert.ToInt32(reader["UserId"]);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error retrieving user: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return userId;
+        }
 
         public bool RegisterUser(string username, string email, string passwordHash)
         {

@@ -13,3 +13,5 @@ D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_
 D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form4.resources
 D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form5.resources
 D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form6.resources
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form7.resources
+D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form8.resources

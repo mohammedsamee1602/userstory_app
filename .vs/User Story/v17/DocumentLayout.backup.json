@@ -1,12 +1,70 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|d:\\development\\ruberx\\source\\user_story\\userstory_app\\user story\\form8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|solutionrelative:user story\\form8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|d:\\development\\ruberx\\source\\user_story\\userstory_app\\user story\\form8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|solutionrelative:user story\\form8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|d:\\development\\ruberx\\source\\user_story\\userstory_app\\user story\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8F798EA-780C-4EFA-B6E9-B10A275DE796}|User Story\\User Story.csproj|solutionrelative:user story\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form8.cs [Design]",
+              "DocumentMoniker": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\Form8.cs",
+              "RelativeDocumentMoniker": "User Story\\Form8.cs",
+              "ToolTip": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\Form8.cs [Design]",
+              "RelativeToolTip": "User Story\\Form8.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T14:27:20.705Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\Program.cs",
+              "RelativeDocumentMoniker": "User Story\\Program.cs",
+              "ToolTip": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\Program.cs",
+              "RelativeToolTip": "User Story\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T14:23:55.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form8.cs",
+              "DocumentMoniker": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\Form8.cs",
+              "RelativeDocumentMoniker": "User Story\\Form8.cs",
+              "ToolTip": "D:\\Development\\ruberx\\source\\User_Story\\userstory_app\\User Story\\Form8.cs",
+              "RelativeToolTip": "User Story\\Form8.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAlwIcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T14:23:31.407Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
