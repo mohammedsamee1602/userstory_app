@@ -15,3 +15,37 @@ D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_
 D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form6.resources
 D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form7.resources
 D:\Development\ruberx\source\User_Story\userstory_app\User Story\obj\Debug\User_Story.Form8.resources
+C:\Users\moham\Downloads\testing 123\User Story\bin\Debug\User Story.exe.config
+C:\Users\moham\Downloads\testing 123\User Story\bin\Debug\User Story.exe
+C:\Users\moham\Downloads\testing 123\User Story\bin\Debug\User Story.pdb
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User Story.csproj.AssemblyReference.cache
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User_Story.Form1.resources
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User_Story.Form2.resources
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User_Story.Form3.resources
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User_Story.Form4.resources
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User_Story.Form5.resources
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User_Story.Form6.resources
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User_Story.Form7.resources
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User_Story.Form8.resources
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User_Story.Properties.Resources.resources
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User Story.csproj.GenerateResource.cache
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User Story.csproj.CoreCompileInputs.cache
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User Story.exe
+C:\Users\moham\Downloads\testing 123\User Story\obj\Debug\User Story.pdb
+C:\Users\moham\Downloads\Tc code\User Story\bin\Debug\User Story.exe.config
+C:\Users\moham\Downloads\Tc code\User Story\bin\Debug\User Story.exe
+C:\Users\moham\Downloads\Tc code\User Story\bin\Debug\User Story.pdb
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User Story.csproj.AssemblyReference.cache
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User_Story.Form1.resources
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User_Story.Form2.resources
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User_Story.Form3.resources
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User_Story.Form4.resources
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User_Story.Form5.resources
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User_Story.Form6.resources
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User_Story.Form7.resources
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User_Story.Form8.resources
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User_Story.Properties.Resources.resources
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User Story.csproj.GenerateResource.cache
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User Story.csproj.CoreCompileInputs.cache
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User Story.exe
+C:\Users\moham\Downloads\Tc code\User Story\obj\Debug\User Story.pdb
